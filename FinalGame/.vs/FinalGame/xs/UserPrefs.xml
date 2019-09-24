@@ -1,0 +1,14 @@
+﻿<Properties StartupConfiguration="{16DD1D4B-0017-C897-AC70-0D4740C4ACC9}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Ship_Controller.cs">
+    <Files>
+      <File FileName="Assets/Scripts/Ship_Controller.cs" Line="43" Column="92" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
