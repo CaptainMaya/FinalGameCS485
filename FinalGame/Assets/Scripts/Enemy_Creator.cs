@@ -2,11 +2,21 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
+public class Creator_Stats
+{
+    public float maxHealth;
+    public float currentHealth;
+
+    public float damage;
+}
+
 public class Enemy_Creator : MonoBehaviour
 {
 
 	public GameObject bigEnemy;
 	public GameObject smallEnemy;
+	public float damage;
 
     // Start is called before the first frame update
     void Start()

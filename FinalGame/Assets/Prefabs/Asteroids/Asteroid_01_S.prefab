@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 2547980860405132781}
   - component: {fileID: 6152326172435538427}
   - component: {fileID: 1518529354557772481}
+  - component: {fileID: -2125703926996180559}
   m_Layer: 0
   m_Name: Asteroid_01_S
   m_TagString: Untagged
@@ -106,3 +107,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3efb6569ebd864d44ba2cb4a27170a4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    maxHealth: 0
+    currentHealth: 0
+    damage: 0
+  explosionPrefab: {fileID: 0}
+--- !u!54 &-2125703926996180559
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2547980860403200813}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 4
+  m_CollisionDetection: 0
