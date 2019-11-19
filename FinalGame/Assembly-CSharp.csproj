@@ -69,6 +69,7 @@
     <Compile Include="Assets\Scripts\Enemy_Creator.cs" />
     <Compile Include="Assets\Scripts\EnemyBig_Controller.cs" />
     <Compile Include="Assets\Scripts\EnemySmall_Controller.cs" />
+    <Compile Include="Assets\Scripts\Explosion_Controller.cs" />
     <Compile Include="Assets\Scripts\Ship_Controller.cs" />
     <Compile Include="Assets\Scripts\UI_Controller.cs" />
     <Compile Include="Assets\Shared\Ramps\Runtime\RampAsset.cs" />
