@@ -14,15 +14,15 @@ public class Creator_Stats
 public class Enemy_Creator : MonoBehaviour
 {
 
-	public GameObject bigEnemy;
-	public GameObject smallEnemy;
+	public GameObject enemyDrone;
+	public GameObject enemyBrute;
 	public float damage;
 
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnEnemyWaveSmall", 2.0f, 5.0f);
-	spawnEnemyBig();
+        InvokeRepeating("spawnWaveDrone", 2.0f, 5.0f);
+        InvokeRepeating("spawnWaveBrute", 2.0f, 5.0f);
     }
 
     // Update is called once per frame
@@ -31,27 +31,35 @@ public class Enemy_Creator : MonoBehaviour
         
     }
 
-	void spawnEnemyBig()
-	{
-		Instantiate(bigEnemy);
-	}
 
-	public IEnumerator spawnEnemySmall(float waitTime)
+	public IEnumerator spawnEnemyDrone(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
-		Instantiate(smallEnemy);
+		//Instantiate(enemyDrone);
+		Instantiate(enemyDrone, new Vector3(Random.Range(-50, 50), 0, 70), new Quaternion(0, 180, 0, 0));
 	}
 
-	void spawnEnemyWaveBig()
+	public IEnumerator spawnEnemyBrute(float waitTime)
 	{
+		yield return new WaitForSeconds(waitTime);
+		//Instantiate(enemyBrute);
+		Instantiate(enemyBrute, new Vector3(Random.Range(-50, 50), 0, 70), new Quaternion(0, 180, 0, 0));
 	}
 
-	void spawnEnemyWaveSmall()
+
+
+	void spawnWaveDrone()
 	{
-		StartCoroutine(spawnEnemySmall(0.5f));
-		StartCoroutine(spawnEnemySmall(1.0f));
-		StartCoroutine(spawnEnemySmall(1.5f));
-		StartCoroutine(spawnEnemySmall(2.0f));
-		StartCoroutine(spawnEnemySmall(2.5f));
+		StartCoroutine(spawnEnemyDrone(0.5f));
+		StartCoroutine(spawnEnemyDrone(1.0f));
+		StartCoroutine(spawnEnemyDrone(1.5f));
+		StartCoroutine(spawnEnemyDrone(2.0f));
+		StartCoroutine(spawnEnemyDrone(2.5f));
+	}
+
+	void spawnWaveBrute()
+	{
+		StartCoroutine(spawnEnemyBrute(1.5f));
+		StartCoroutine(spawnEnemyBrute(3.0f));
 	}
 }

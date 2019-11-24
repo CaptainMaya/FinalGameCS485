@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.1802837, g: 0.22571404, b: 0.30692273, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -193,7 +193,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: NaN, y: 4.477762e-19, z: NaN, w: 4.477762e-19}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -209,7 +209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &963194225
 GameObject:
@@ -430,7 +430,7 @@ PrefabInstance:
     - target: {fileID: 4997038599179907083, guid: 1cfc391fa1efc4758a0a107a173135c6,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4997038599179907083, guid: 1cfc391fa1efc4758a0a107a173135c6,
         type: 3}
@@ -667,11 +667,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7edbb5dc37ce92d4a9ae8db4e908c5ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bigEnemy: {fileID: 6797244582559423237, guid: 39140cc5378c4ec4cbe89787c932edf2,
+  enemyDrone: {fileID: 8352713152388954187, guid: b0eb4922ecb8047459dd8b2b8c700c66,
     type: 3}
-  smallEnemy: {fileID: 3324431661472872592, guid: cd3b9800fe3371946b0b946b85732665,
+  enemyBrute: {fileID: 3282575675126911511, guid: cf25355cc7dffa64893b5d46dc704f96,
     type: 3}
-  damage: 50
+  damage: 0
 --- !u!1001 &2060592482
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -789,7 +789,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2530444263783655403
 PrefabInstance:
@@ -1087,7 +1087,7 @@ PrefabInstance:
     - target: {fileID: 9086305365998390306, guid: 492dd706944484102bc0e4ac252244db,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 9086305365998390306, guid: 492dd706944484102bc0e4ac252244db,
         type: 3}
