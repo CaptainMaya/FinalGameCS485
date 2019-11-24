@@ -16,6 +16,7 @@ public class Enemy_Creator : MonoBehaviour
 
 	public GameObject enemyDrone;
 	public GameObject enemyBrute;
+	public GameObject enemyShockwave;
 	public float damage;
 
     // Start is called before the first frame update
@@ -23,6 +24,7 @@ public class Enemy_Creator : MonoBehaviour
     {
         InvokeRepeating("spawnWaveDrone", 2.0f, 5.0f);
         InvokeRepeating("spawnWaveBrute", 2.0f, 5.0f);
+        InvokeRepeating("spawnWaveShockwave", 5.0f, 6.0f);
     }
 
     // Update is called once per frame
@@ -46,6 +48,13 @@ public class Enemy_Creator : MonoBehaviour
 		Instantiate(enemyBrute, new Vector3(Random.Range(-50, 50), 0, 70), new Quaternion(0, 180, 0, 0));
 	}
 
+	public IEnumerator spawnEnemyShockwave(float waitTime)
+	{
+		yield return new WaitForSeconds(waitTime);
+		//Instantiate(enemyShockwave);
+		Instantiate(enemyShockwave, new Vector3(Random.Range(-50, 50), 0, 70), new Quaternion(0, 180, 0, 0));
+	}
+
 
 
 	void spawnWaveDrone()
@@ -61,5 +70,10 @@ public class Enemy_Creator : MonoBehaviour
 	{
 		StartCoroutine(spawnEnemyBrute(1.5f));
 		StartCoroutine(spawnEnemyBrute(3.0f));
+	}
+
+	void spawnWaveShockwave()
+	{
+		StartCoroutine(spawnEnemyShockwave(Random.Range(1.0f, 4.0f)));
 	}
 }

@@ -60,10 +60,12 @@
      <Compile Include="Assets\Scripts\Asteroid_Field.cs" />
      <Compile Include="Assets\Scripts\Bullet_Controller.cs" />
      <Compile Include="Assets\Scripts\BulletDrone_Controller.cs" />
+     <Compile Include="Assets\Scripts\BulletShockwave_Controller.cs" />
      <Compile Include="Assets\Scripts\Enemy_Creator.cs" />
      <Compile Include="Assets\Scripts\EnemyBig_Controller.cs" />
      <Compile Include="Assets\Scripts\EnemyBrute_Controller.cs" />
      <Compile Include="Assets\Scripts\EnemyDrone_Controller.cs" />
+     <Compile Include="Assets\Scripts\EnemyShockwave_Controller.cs" />
      <Compile Include="Assets\Scripts\EnemySmall_Controller.cs" />
      <Compile Include="Assets\Scripts\Explosion_Controller.cs" />
      <Compile Include="Assets\Scripts\Ship_Controller.cs" />
