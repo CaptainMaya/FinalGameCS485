@@ -1,12 +1,12 @@
 fileFormatVersion: 2
-guid: 7edbb5dc37ce92d4a9ae8db4e908c5ae
+guid: 415a582200142334abd517ba2d94b7ac
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - bigEnemy: {fileID: 6797244582559423237, guid: 39140cc5378c4ec4cbe89787c932edf2,
-      type: 3}
-  - smallEnemy: {fileID: 3324431661472872592, guid: cd3b9800fe3371946b0b946b85732665,
+  - Drone: {fileID: 8352713152388954187, guid: 7482993212a615b469921fccc105570b, type: 3}
+  - Brute: {fileID: 3282575675126911511, guid: 1081ad0e2e1d0a0408ff46f586a58f85, type: 3}
+  - Shockwave: {fileID: 5763710930038650879, guid: 02f03795ab26f1f43b6645af618f4294,
       type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
