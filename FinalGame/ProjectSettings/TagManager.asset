@@ -6,6 +6,11 @@ TagManager:
   tags:
   - Shootable
   - Ast
+  - Spawner
+  - Bullet
+  - LittleOne
+  - Boss
+  - NewBoss
   layers:
   - Default
   - TransparentFX
