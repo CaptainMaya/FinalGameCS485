@@ -130,11 +130,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f76f4fea0c3324ed1b6739428c825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats:
+    maxHealth: 100
+    currentHealth: 100
   bullet: {fileID: 8351603910250351894, guid: 492dd706944484102bc0e4ac252244db, type: 3}
   firePoints:
   - {fileID: 8121431}
   - {fileID: 1193355619}
   fireRate: 20
+  explosionPrefab: {fileID: 0}
   moveSpeed: 40
   tiltAngle: 10
 --- !u!1001 &724396528752039802
