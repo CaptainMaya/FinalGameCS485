@@ -40,4 +40,14 @@ public class Asteroid_Controller : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            stats.currentHealth -= collision.transform.GetComponent<Bullet_Controller>().damage;
+            Destroy(collision.gameObject);
+        }
+     
+
+    }
 }

@@ -1,24 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+//using System.Boolean;
 
-
-public class Creator_Stats
-{
-    public float maxHealth;
-    public float currentHealth;
-
-    public float damage;
-}
 
 public class Enemy_Creator : MonoBehaviour
 {
 
+<<<<<<< HEAD
+    public GameObject bigEnemy;
+    public GameObject AlienFighter;
+	public GameObject smallEnemy;
+    //public float damage;
+=======
 
 	public GameObject Drone;
 	public GameObject Brute;
 	public GameObject Shockwave;
 	public float damage;
+>>>>>>> master
 
 	bool bossBattle;
 	float waveCode;
@@ -36,11 +36,16 @@ public class Enemy_Creator : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+        //spawnEnemyWaveSmall();
+
     }
 
 	void spawnWave()
 	{
+<<<<<<< HEAD
+		//Instantiate(bigEnemy);
+=======
 
 		while(!bossBattle)
 		{
@@ -69,14 +74,22 @@ public class Enemy_Creator : MonoBehaviour
 				spawnEnemyWaveShockwave();
 			}
 		}
+>>>>>>> master
 	}
 
 
 	public IEnumerator spawnEnemyDrone(float waitTime)
 	{
 		yield return new WaitForSeconds(waitTime);
+<<<<<<< HEAD
+		Instantiate(smallEnemy);
+        Instantiate(AlienFighter);
+
+    }
+=======
 		Instantiate(Drone, new Vector3(Random.Range(-50, 50), 0, 70), new Quaternion(0, 180, 0, 0));
 	}
+>>>>>>> master
 
 	public IEnumerator spawnEnemyBrute(float waitTime)
 	{
@@ -112,7 +125,20 @@ public class Enemy_Creator : MonoBehaviour
 
 	void spawnEnemyWaveShockwave()
 	{
+<<<<<<< HEAD
+
+            StartCoroutine(spawnEnemySmall(0.5f));
+            StartCoroutine(spawnEnemySmall(1.0f));
+            StartCoroutine(spawnEnemySmall(1.5f));
+            StartCoroutine(spawnEnemySmall(2.0f));
+            StartCoroutine(spawnEnemySmall(2.5f));
+
+    }
+
+  
+=======
 		StartCoroutine(spawnEnemyShockwave(0.5f));
 		StartCoroutine(spawnEnemyShockwave(4.5f));
 	}
+>>>>>>> master
 }

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 [System.Serializable]
 
@@ -27,12 +29,15 @@ public class Ship_Controller : MonoBehaviour
     public float moveSpeed;
     public float tiltAngle;
 
+
+
     private void Start()
     {
         rb = transform.GetComponent<Rigidbody>(); //gets the outter shell of the ship
         stats.currentHealth = stats.maxHealth;
-        nextFire = 1 / fireRate; //how fast the bullets will be fired
+        nextFire = 2f / fireRate; //how fast the bullets will be fired
         //nextFire += 1 / fireRate;
+
     }
 
     private void Update()
@@ -43,7 +48,13 @@ public class Ship_Controller : MonoBehaviour
         if (stats.currentHealth <= 0)
         {
         	Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+            //yield WaitForSeconds(4);
+            //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+            SceneManager.LoadScene("GameOver");
             Destroy(gameObject);
+            
+
+
         }
     }
 
@@ -78,7 +89,7 @@ public class Ship_Controller : MonoBehaviour
 
 
                 }
-               nextFire += 1 / fireRate;
+               nextFire += 2f / fireRate;
 
             }
 
@@ -92,5 +103,25 @@ public class Ship_Controller : MonoBehaviour
             stats.currentHealth -= collision.transform.GetComponent<Asteroid_Controller>().stats.damage;
             Destroy(collision.gameObject);
         }
+        if (collision.gameObject.tag == "Spawner")
+        {
+            stats.currentHealth -= collision.transform.GetComponent<EnemyBig_Controller>().stats.damage;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Bullet")
+        {
+            stats.currentHealth -= collision.transform.GetComponent<Bullet_Controller>().damage;
+            Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "LittleOne")
+        {
+            stats.currentHealth -= collision.transform.GetComponent<EnemySmall_Controller>().stats.damage;
+            Destroy(collision.gameObject);
+        }
+
     }
 }
+
+
